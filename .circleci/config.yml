@@ -7,10 +7,10 @@ jobs:
   build:
     docker:
       - image: "cimg/base:stable"
-   machine: 
+    machine:
       image: ubuntu-2004:current
-macos:
- xcode: 12.5.1
+    macos:
+      xcode: 12.5.1
     steps:
       - checkout
       - aws-cli/setup
