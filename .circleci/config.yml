@@ -6,13 +6,13 @@ orbs:
 jobs:
   build:
     docker:
-      - image: account-id.dkr.ecr.us-east-1.amazonaws.com/org/repo:0.1
-       aws_auth:
-          aws_access_key_id: AKIA3YZXOUYXBL2LDJOL
-          aws_secret_access_key: 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
+      - image: "cimg/base:stable"
     steps:
       - checkout
       - aws-cli/setup
+      aws_auth:
+          aws_access_key_id: AKIA3YZXOUYXBL2LDJOL
+          aws_secret_access_key: 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
       - node/install
       - eb/setup
       - run:
