@@ -9,7 +9,7 @@ import { environment } from "../../environments/environment";
 import { map } from "rxjs/operators";
 
 const API_HOST =
-  "http://udagram-api-env.eba-dphrfshg.us-east-1.elasticbeanstalk.com/";
+  "http://udagram-api-env.eba-dphrfshg.us-east-1.elasticbeanstalk.com";
 
 @Injectable({
   providedIn: "root",
