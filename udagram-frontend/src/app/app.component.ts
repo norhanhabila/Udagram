@@ -1,24 +1,24 @@
-import { Component } from "@angular/core";
+import { Component } from '@angular/core';
 
-import { Platform } from "@ionic/angular";
-import { SplashScreen } from "@ionic-native/splash-screen/ngx";
-import { StatusBar } from "@ionic-native/status-bar/ngx";
-import { environment } from "../environments/environment";
+import { Platform } from '@ionic/angular';
+import { SplashScreen } from '@ionic-native/splash-screen/ngx';
+import { StatusBar } from '@ionic-native/status-bar/ngx';
+import { environment } from '../environments/environment';
 
 @Component({
-  selector: "app-root",
-  templateUrl: "app.component.html",
+  selector: 'app-root',
+  templateUrl: 'app.component.html'
 })
 export class AppComponent {
   public appPages = [
     {
-      title: "Home",
-      url: "/home",
-      icon: "home",
-    },
+      title: 'Home',
+      url: '/home',
+      icon: 'home'
+    }
   ];
 
-  public appName = "Udagram";
+  public appName = environment.appName;
 
   constructor(
     private platform: Platform,
@@ -32,7 +32,7 @@ export class AppComponent {
     this.platform.ready().then(() => {
       this.statusBar.styleDefault();
       this.splashScreen.hide();
-      document.title = "Udagram";
+      document.title = environment.appName;
     });
   }
 }
