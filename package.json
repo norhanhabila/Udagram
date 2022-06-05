@@ -7,7 +7,7 @@
     "frontend:build": "cd ./udagram-frontend && npm run build",
     "frontend:test": "cd ./udagram-frontend && npm run test",
     "front-end:deploy": "cd ./udagram-frontend && npm run deploy && cd ..",
-    "set-eb-env": "eb use Udagramapi-env && eb setenv AWS_BUCKET=$AWS_BUCKET URL=$URL POSTGRES_USERNAME=$POSTGRES_USERNAME POSTGRES_PASSWORD=$POSTGRES_PASSWORD POSTGRES_HOST=$POSTGRES_HOST POSTGRES_DB=$POSTGRES_DB AWS_DEFAULT_REGION=$AWS_DEFAULT_REGION PORT=$PORT API_PORT=$API_PORT JWT_SECRET=$JWT_SECRET",
+    "set-eb-env": "eb init && eb use Udagramapi-env && eb setenv AWS_BUCKET=$AWS_BUCKET URL=$URL POSTGRES_USERNAME=$POSTGRES_USERNAME POSTGRES_PASSWORD=$POSTGRES_PASSWORD POSTGRES_HOST=$POSTGRES_HOST POSTGRES_DB=$POSTGRES_DB AWS_DEFAULT_REGION=$AWS_DEFAULT_REGION PORT=$PORT API_PORT=$API_PORT JWT_SECRET=$JWT_SECRET",
     "backend:deploy": "npm run set-eb-env && eb deploy Udagramapi-env"
   },
   "dependencies": {
