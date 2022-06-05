@@ -12,7 +12,7 @@ jobs:
       - aws-cli/setup
       - node/install
       - eb/setup
- - run:
+      - run:
           name: Front-End install
           command: |
             npm run frontend:install
