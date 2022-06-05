@@ -17,5 +17,5 @@ global:
   profile: eb-cli
   sc: null
   workspace_type: Application
-atrifact:
-  deploy: ./www/Archive.zip
+deploy:
+  artifact: ./www/Archive.zip
