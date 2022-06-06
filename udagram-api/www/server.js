@@ -45,7 +45,7 @@ const model_index_1 = require("./controllers/v0/model.index");
     yield sequelize_1.sequelize.sync();
     console.log("Database Connected");
     const app = express_1.default();
-    const port = process.env.API_PORT || 8080;
+    const port = process.env.PORT || 8080;
     app.use(body_parser_1.default.json());
     app.use(cors_1.default());
     app.use("/api/v0/", index_router_1.IndexRouter);
@@ -55,7 +55,7 @@ const model_index_1 = require("./controllers/v0/model.index");
     }));
     // Start the Server
     app.listen(port, () => {
-        console.log(`server running ${process.env.URL}`);
+        console.log(`server running ${process.env.URL}  ${JSON.stringify(process.env)}`);
         console.log(`press CTRL+C to stop server`);
     });
 }))();
