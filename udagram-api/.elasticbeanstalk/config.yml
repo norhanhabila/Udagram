@@ -17,5 +17,3 @@ global:
   profile: default
   sc: null
   workspace_type: Application
-deploy:
-  artifact: Archive.zip
